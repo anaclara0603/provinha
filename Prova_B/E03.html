@@ -1,0 +1,26 @@
+<script>
+    //Problema: Controle de suínos
+    /*
+    Desenvolva um programa que conte os 15 porquinhos que estão na fazenda. Para cada porquinho contado, pergunte se o porquinho é macho ou se o porquinho é fêmea.
+    Ao final, apresente a quantidade de machos e fêmeas que possuem na fazenda.
+    */
+
+    //Entrada
+    let macho = [];
+    let femea = [];
+
+    //Processamento
+    for(let a = 1; a <= 15; a++){
+        const sexo = prompt(`informe o sexo do porquinho ${a}:  (F-femea  M-macho)`).toUpperCase()
+        if(sexo === "F" || sexo === "femea"){
+            femea.push(sexo)
+        } else if(sexo === "M" || sexo === "macho"){
+            macho.push(sexo)
+        } else{
+            alert("valor invalido!")
+        }
+    }
+
+    //Saída
+    document.write(`Femeas: ${femea.length}</br> Machos: ${macho.length}`)
+</script>
